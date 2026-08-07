@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2º C.R.O.P.E. - Campeonato de Robótica e Programação Educacional</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="cyber-theme">
+
+    <!-- ACESSIBILIDADE -->
+<div class="accessibility-bar" role="region" aria-label="Acessibilidade">
+    <button id="btn-increase-font" title="Aumentar fonte" aria-label="Aumentar fonte">A+</button>
+    <button id="btn-decrease-font" title="Diminuir fonte" aria-label="Diminuir fonte">A-</button>
+    <button id="btn-toggle-contrast" title="Alternar alto contraste" aria-label="Alto contraste">👁️ Alto Contraste</button>
+</div>
+
+    <!-- BARRA LATERAL DE NAVEGAÇÃO -->
+    <aside class="sidebar-navigation" id="sidebar">
+        <div class="sidebar-header">
+            <a href="#home" class="brand-logo">
+                <span class="brand-edition">2º</span> C.R.O.P.E.
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Alternar Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <span class="nav-icon">🏠</span>
+                        <span class="nav-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="dropdown-btn" aria-expanded="false">
+                        <span class="nav-icon">📜</span>
+                        <span class="nav-text">Regulamentos</span>
+                        <span class="arrow-icon">❯</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#regulamento-robotica" class="nav-link" data-section="regulamento-robotica">Robótica Educacional</a></li>
+                        <li><a href="#regulamento-programacao" class="nav-link" data-section="regulamento-programacao">Programação Educacional</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#inscricoes" class="nav-link" data-section="inscricoes">
+                        <span class="nav-icon">🚀</span>
+                        <span class="nav-text">Inscrições</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#premiacoes" class="nav-link" data-section="premiacoes">
+                        <span class="nav-icon">🥇</span>
+                        <span class="nav-text">Premiações</span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="dropdown-btn" aria-expanded="false">
+                        <span class="nav-icon">🖼️</span>
+                        <span class="nav-text">Galeria de Fotos</span>
+                        <span class="arrow-icon">❯</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#fotos-2025" class="nav-link" data-section="fotos-2025">Fotos 1º CROPE (2025)</a></li>
+                        <li><a href="#fotos-2026" class="nav-link" data-section="fotos-2026">Fotos 2º CROPE (2026)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="dropdown-btn" aria-expanded="false">
+                        <span class="nav-icon">🏆</span>
+                        <span class="nav-text">Ganhadores</span>
+                        <span class="arrow-icon">❯</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#ganhadores-2025" class="nav-link" data-section="ganhadores-2025">Ganhadores (2025)</a></li>
+                        <li><a href="#ganhadores-2026" class="nav-link" data-section="ganhadores-2026">Ganhadores (2026)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato" class="nav-link" data-section="contato">
+                        <span class="nav-icon">📞</span>
+                        <span class="nav-text">Contato</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <footer class="sidebar-footer">
+            <p>NRE Umuarama — SEED/PR</p>
+        </footer>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL (SPA VISUAL) -->
+    <main class="main-content">
+
+        <!-- ================= SEÇÃO: HOME ================= -->
+        <section id="home" class="page-section active">
+            <header class="banner-header">
+                <img src="images/banner/banner-home.png" alt="Banner 2º CROPE" class="banner-img" onerror="this.classList.add('banner-placeholder')">
+                <div class="banner-fallback-title">
+                    <h1>2º C.R.O.P.E.</h1>
+                    <p>CAMPEONATO DE ROBÓTICA E PROGRAMAÇÃO EDUCACIONAL</p>
+                </div>
+            </header>
+
+            <article class="content-wrapper">
+                <header class="section-title-group">
+                    <span class="badge-neon">Inscrições Abertas</span>
+                    <h2>Bem-vindo ao 2º C.R.O.P.E.</h2>
+                    <p class="lead-text">Está aberto o Campeonato de Robótica e Programação Educacional para alunos das escolas estaduais!</p>
+                    <p class="lead-text">Reúna sua equipe, prepare seu carrinho e venha competir!</p>
+                </header>
+
+                <!-- Player de Áudio Oficial -->
+                    <div class="audio-player-card">
+                        <div class="audio-info">
+                            <div class="audio-icon">🎵</div>
+                            <div class="audio-details">
+                                <span class="audio-tag">Música Tema Oficial</span>
+                                <h4 class="audio-title">2º C.R.O.P.E.</h4>
+                            </div>
+                        </div>
+    
+                        <!-- O atributo 'controls' permite que o usuário dê o play e o 'preload="metadata"' não força o carregamento pesado -->
+                        <audio class="custom-audio-element" controls preload="metadata">
+                            <source src="audio/musica-tema.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                    </div>
+                
+                <section class="info-grid">
+                    <article class="info-card">
+                        <div class="info-icon">📅</div>
+                        <div class="info-body">
+                            <h3>Data</h3>
+                            <p>23 de setembro</p>
+                        </div>
+                    </article>
+
+                    <article class="info-card">
+                        <div class="info-icon">⏰</div>
+                        <div class="info-body">
+                            <h3>Horário</h3>
+                            <p>13h00 às 17h30</p>
+                        </div>
+                    </article>
+
+                    <article class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div class="info-body">
+                            <h3>Local</h3>
+                            <p>CECM Monteiro Lobato – Umuarama</p>
+                        </div>
+                    </article>
+
+                    <article class="info-card">
+                        <div class="info-icon">👥</div>
+                        <div class="info-body">
+                            <h3>Equipes</h3>
+                            <p>Robótica - 2 a 4 alunos.</p>
+                            <p>Programação - Individual.</p>
+                        </div>
+                    </article>
+                </section>
+
+                <article class="callout-box accent-cyan">
+                    <div class="callout-icon">🚀</div>
+                    <div class="callout-content">
+                        <h3>Como participar?</h3><br>                        
+                        <p>ROBÓTICA: Monte seu robô e desafie outras equipes para uma emocionante disputa na arena! A competição segue regras específicas para garantir um evento justo e cheio de adrenalina.</p><br>                        
+                        <p>PROGRAMAÇÃO: Crie seu jogo e conquiste a admiração do público e dos jurados! A competição segue regras específicas para garantir um evento justo e cheio de adrenalina.</p>
+                        <a href="#inscricoes" class="btn-primary nav-trigger" data-target="inscricoes">Garanta sua Inscrição &rarr;</a>
+                    </div>
+                </article>
+
+               <article class="callout-box accent-cyan">
+                    <div class="callout-icon">📍</div>
+                    <div class="callout-content">
+                    <h3>Como chegar ao evento?</h3><br>                    
+                    <p><strong>ENDEREÇO DO COLÉGIO:</strong> Rua Amazonas, 3056 - Zona II - Umuarama-PR.</p><br>                    
+                    <p><strong>EVENTO:</strong> A entrada dos estudantes no evento será pela Av. Presidente Castelo Branco, no portão do Ginásio.</p><br>
+                    
+
+                    <!-- Contêiner do Mini-Mapa -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.883713912192!2d-53.31583000000001!3d-23.751500000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f2d40026e632db%3A0xb3cf51aef977a4a2!2sR.%20Amazonas%2C%203056%20-%20Zona%20II%2C%20Umuarama%20-%20PR%2C%2087502-120!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="220" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    </div>
+                </article>
+
+            </article>
+        </section>
+
+
+        <!-- ================= SEÇÃO: REGULAMENTO ROBÓTICA ================= -->
+        <section id="regulamento-robotica" class="page-section">
+            <header class="banner-header">
+                <img src="images/banner/banner-regulamento-robotica.png" alt="Banner Regulamento Robótica Educacional" class="banner-img" onerror="this.classList.add('banner-placeholder')">
+                <div class="banner-fallback-title">
+                    <h1>REGULAMENTO ROBÓTICA</h1>
+                </div>
+            </header>
+
+            <article class="content-wrapper">
+                <header class="section-title-group">
+                    <h2>Regulamento de Robótica Educacional</h2>
+                    <p class="lead-text">Nosso manual de superpoderes! Ele garante que a competição seja justa, emocionante e cheia de desafios incríveis para você mostrar todo o seu talento na robótica.</p>
+                </header><br>
+
+                <div class="action-bar-pdf">
+                    <a href="docs/regulamento-robotica.pdf" target="_blank" rel="noopener noreferrer" class="btn-download-pdf">
+                        📄 Clique aqui e baixe o regulamento de Robótica em PDF
+                    </a>
+                </div>
+
+                <article class="alert-box warning-alert">
+                    <div class="alert-header">
+                        <span class="alert-icon">⚠️</span>
+                        <h3>Briefing Obrigatório</h3>
+                    </div>
+                    <p>Será realizado um briefing obrigatório antes do início da competição, com o objetivo de esclarecer e elucidar quaisquer dúvidas dos competidores. É de responsabilidade das equipes interessadas estarem presentes no briefing, com pelo menos um representante, no horário previamente informado pela organização.</p>
+                </article>
+
+                <section class="rules-detail-card">
+                    <h3>Regras Gerais & Autoridade</h3><br>
+                    <ul class="styled-list">
+                        <li>A organização poderá realizar briefings adicionais para discutir eventuais situações não previstas neste regulamento.</li>
+                        <li>Em casos de incidentes não previstos nestas regras ou não acordados previamente em briefing, caberá à organização do evento deliberar sobre como proceder.</li>
+                        <li>Os árbitros poderão solicitar informações técnicas ou operacionais sobre o robô, se julgarem necessário.</li>
+                        <li>Os árbitros têm autoridade para desclassificar robôs ou tomar decisões cabíveis durante a competição, desde que justificadas com base neste regulamento e no conteúdo do briefing.</li>
+                    </ul>
+                </section>
+            </article>
+        </section>
+
+        <!-- ================= SEÇÃO: REGULAMENTO PROGRAMAÇÃO ================= -->
+        <section id="regulamento-programacao" class="page-section">
+            <header class="banner-header">
+                <img src="images/banner/banner-regulamento-programacao.png" alt="Banner Regulamento Programação Educacional" class="banner-img" onerror="this.classList.add('banner-placeholder')">
+                <div class="banner-fallback-title">
+                    <h1>REGULAMENTO PROGRAMAÇÃO</h1>
+                </div>
+            </header>
+
+            <article class="content-wrapper">
+                <header class="section-title-group">
+                    <h2>Regulamento de Programação Educacional</h2>
+                    <p class="lead-text">Nosso guia supremo! Ele mostra tudo que deve ser feito para que a competição seja justa, emocionante e cheia de desafios incríveis para você mostrar todo o seu talento na programação.</p>
+                </header><br>
+
+                <div class="action-bar-pdf">
+                    <a href="docs/regulamento-programacao.pdf" target="_blank" rel="noopener noreferrer" class="btn-download-pdf">
+                        📄 Clique aqui e baixe o regulamento de Programação em PDF
+                    </a>
+                </div>
+
+                <article class="alert-box warning-alert">
+                    <div class="alert-header">
+                        <span class="alert-icon">🧑‍💻</span>
+                        <h3>Fase Classificatória</h3>
+                    </div>
+                    <p>Após o encerramento das inscrições será realizada uma banca avaliadora para selecionar os 5 projetos que serão apresentados no dia do evento.</p>
+                </article>
+
+                <article class="alert-box warning-alert">
+                    <div class="alert-header">
+                        <span class="alert-icon">⚠️</span>
+                        <h3>Briefing Obrigatório</h3>
+                    </div>
+                    <p>Será realizado um briefing obrigatório antes do início das apresentações, com o objetivo de esclarecer e elucidar quaisquer dúvidas dos competidores. É de responsabilidade dos interessados estarem presentes no briefing, no horário previamente informado pela organização.</p>
+                </article>
+
+                <section class="rules-detail-card">
+                    <h3>Orientações Gerais da Competição</h3><br>
+                    <ul class="styled-list">
+                        <li>A organização poderá realizar briefings adicionais para discutir eventuais situações não previstas neste regulamento.</li>
+                        <li>Em casos de incidentes não previstos nestas regras ou não acordados previamente em briefing, caberá à organização do evento deliberar sobre como proceder.</li>
+                        <li>Os avaliadores poderão solicitar informações técnicas sobre o projeto/código, se julgarem necessário.</li>
+                    </ul>
+                </section>
+            </article>
+        </section>
+
+        <!-- ================= SEÇÃO: INSCRIÇÕES ================= -->
+        <section id="inscricoes" class="page-section">
+            <header class="banner-header">
+                <img src="images/banner/banner-inscricoes.png" alt="Banner Inscrições CROPE" class="banner-img" onerror="this.classList.add('banner-placeholder')">
+                <div class="banner-fallback-title">
+                    <h1>INSCRIÇÕES</h1>
+                </div>
+            </header>
+
+            <article class="content-wrapper">
+                <header class="section-title-group">
+                    <h2>Inscrições para o 2º CROPE</h2>
+                    <p class="lead-text">Confira os requisitos de participação e garanta a vaga da sua escola e equipe nas modalidades disponíveis.</p><br>
+                </header>
+
+                <section class="requirements-card">
+                    <h3>Requisitos para Participação</h3><br>
+                    <ul class="check-list">
+                        <li>Podem participar alunos regularmente matriculados nas escolas estaduais jurisdicionadas ao NRE Umuarama.</li>
+                        <li>As equipes/competidor inscritos devem representar uma instituição educacional.</li>
+                        <li>Para Robótica cada equipe deve ser composta por 2 até 4 alunos.</li>
+                        <li>Para Programação os trabalhos devem ser individuais.</li>
+                        <li>Cada equipe de Robótica deverá fazer a inscrição na categoria em que deseja participar.</li>
+                        <li>Uma instituição pode ser representada por várias equipes ou competidor.</li>
+                        <li>O registro de diferentes equipes da mesma instituição na mesma categoria só é permitido se forem compostas por alunos distintos.</li>
+                    </ul>
+                </section>
+
+                <article class="callout-box alert-border">
+                    <div class="callout-icon">✍️</div>
+                    <div class="callout-content">
+                        <h3>Autorização para MENORES de idade.</h3>
+                        <p><strong>É obrigatório anexar a autorização de uso de imagem assinada pelos responsáveis legais dos participantes no ato do preenchimento do formulário de inscrição.</strong></p>
+                        <p><strong>Todas as autorizações devem ser agrupadas em um único arquivo PDF para anexar no formulário.</strong></p>
+                        <a href="docs/termo-uso-imagem-menor.pdf" target="_blank" class="btn-secondary">
+                            📄 Clique aqui para baixar o termo de autorização de uso de imagem para MENOR de idade.
+                        </a>
+                    </div>
+                </article>
+
+                <article class="callout-box alert-border-maior">
+                    <div class="callout-icon">✍️</div>
+                    <div class="callout-content">
+                        <h3>Autorização para MAIORES de idade e/ou professores.</h3>
+                        <p><strong>É obrigatório anexar a autorização de uso de imagem devidamente assinada pelos participantes no ato do preenchimento do formulário de inscrição.</strong></p>
+                        <p><strong>Todas as autorizações devem ser agrupadas em um único arquivo PDF para anexar no formulário.</strong></p>
+                        <a href="docs/termo-uso-imagem-maior.pdf" target="_blank" class="btn-secondary">
+                            📄 Clique aqui para baixar o termo de autorização de uso de imagem para MAIOR de idade.
+                        </a>
+                    </div>
+                </article>
+
+                <section class="categories-grid">
+                    <article class="category-card glow-purple">
+                        <div class="category-badge">Modalidade Robótica</div>
+                        <div class="category-icon">🤖</div>
+                        <h3>Robô-Sumô</h3>
+                        <p>Enfrente outros robôs na arena para ver quem consegue manter o domínio no tatame com força, agilidade e estratégia.</p>
+                        <a href="https://forms.gle/gAjZwC9jieRZu14V9" target="_blank" rel="noopener noreferrer" class="btn-action">
+                            <span>🤖 Realizar inscrição: Robô-Sumô</span>
+                        </a>
+                    </article>
+
+                    <article class="category-card glow-blue">
+                        <div class="category-badge">Modalidade Robótica</div>
+                        <div class="category-icon">🏎️</div>
+                        <h3>Seguidor de Linha</h3>
+                        <p>Projete e programe um robô veloz capaz de percorrer o circuito sem perder o traçado e no menor tempo possível.</p>
+                        <a href="https://forms.gle/YvRXK4kQCvYUqTuA7" target="_blank" rel="noopener noreferrer" class="btn-action">
+                            <span>🏎️ Realizar inscrição: Seguidor de Linha</span>
+                        </a>
+                    </article>
+
+                    <article class="category-card glow-green">
+                        <div class="category-badge">Modalidade Programação</div>
+                        <div class="category-icon">💻</div>
+                        <h3>Programação</h3>
+                        <p>Crie um jogo envolvente capaz de cativar o público e os jurados, use toda sua criatividade e desenvolva soluções inteligentes para um código limpo.</p>
+                        <a href="https://forms.gle/HqL9S4xP6eVXHHpk6" target="_blank" rel="noopener noreferrer" class="btn-action">
+                            <span>👨‍💻 Realizar inscrição: Programação</span>
+                        </a>
+                    </article>
+                </section>
+            </article>
+        </section>
+
+        <!-- ================= SEÇÃO: PREMIAÇÕES ================= -->
+        <section id="premiacoes" class="page-section">
+            <header class="banner-header">
+                <img src="images/banner/banner-premiacoes.png" alt="Banner Premiações CROPE" class="banner-img" onerror="this.classList.add('banner-placeholder')">
+                <div class="banner-fallback-title">
+                    <h1>PREMIAÇÕES</h1>
+                </div>
+            </header>
+
+            <article class="content-wrapper">
+                <header class="section-title-group">
+                    <h2>Premiações & Reconhecimento</h2>
+                    <p class="lead-text">Seu esforço, dedicação e criatividade serão valorizados e celebrados no 2º C.R.O.P.E.!</p>
+                </header>
+
+                <section class="awards-grid">
+                    <article class="award-card rank-gold">
+                        <div class="award-trophy">🏆</div>
+                        <h3>Troféus</h3>
+                        <p><strong>1º, 2º e 3º colocados</strong> de cada categoria receberão troféus e medalhas.</p>
+                    </article>
+
+                    <article class="award-card rank-silver">
+                        <div class="award-trophy">🥇</div>
+                        <h3>Medalhas</h3>
+                        <p><strong>4º e 5º colocados</strong> de cada categoria receberão apenas medalhas.</p>
+                    </article>
+
+                    <article class="award-card rank-bronze">
+                        <div class="award-trophy">📜</div>
+                        <h3>Certificados</h3>
+                        <p><strong>Todos os participantes</strong> receberão certificados oficiais de participação de acordo com a categoria.</p>
+                    </article>
+                </section>
+            </article>
+        </section>
+
+        <!-- ================= SEÇÃO: FOTOS 2025 ================= -->
+        <section id="fotos-2025" class="page-section">
+            <header class="banner-header">
+                <img src="images/banner/banner-fotos.png" alt="Banner Fotos" class="banner-img" onerror="this.classList.add('banner-placeholder')">
+                <div class="banner-fallback-title">
+                    <h1>FOTOS DO EVENTO</h1>
+                </div>
+            </header>
+
+            <article class="content-wrapper">
+                <header class="section-title-group">
+                    <h2>Fotos do 1º CROPE (2025)</h2>
+                    <p class="lead-text">Relembre os melhores momentos da primeira edição do Campeonato de Robótica e Programação Educacional.</p>
+                </header>
+
+
+                <section class="gallery-slider-container">
+                    <!-- As fotos serão injetadas dinamicamente via JS aqui -->
+                    <div class="slider-wrapper" id="slider-wrapper2025"></div>
+
+                    <!-- Botões de controle -->
+                    <button class="slider-btn prev" id="slider-prev">❮</button>
+                    <button class="slider-btn next" id="slider-next">❯</button>
+                </section>
+            
+            </article>
+        </section>
+
+        <!-- ================= SEÇÃO: FOTOS 2026 ================= -->
+        <section id="fotos-2026" class="page-section">
+            <header class="banner-header">
+                <img src="images/banner/banner-fotos.png" alt="Banner Fotos" class="banner-img" onerror="this.classList.add('banner-placeholder')">
+                <div class="banner-fallback-title">
+                    <h1>FOTOS DO EVENTO</h1>
+                </div>
+            </header>
+
+            <article class="content-wrapper">
+                <header class="section-title-group">
+                    <h2>Fotos do 2º CROPE (2026) - EM BREVE</h2>
+                    <p class="lead-text">Aqui estarão as fotos da segunda edição do Campeonato de Robótica e Programação Educacional.</p>
+                </header>
+
+                <section class="gallery-slider-container">
+                    <!-- As fotos serão injetadas dinamicamente via JS aqui -->
+                    <div class="slider-wrapper" id="slider-wrapper2026"></div>
+
+                    <!-- Botões de controle -->
+                    <button class="slider-btn prev" id="slider-prev">❮</button>
+                    <button class="slider-btn next" id="slider-next">❯</button>
+                </section>
+
+            </article>
+        </section>
+
+        <!-- ================= SEÇÃO: GANHADORES 2025 ================= -->
+        <section id="ganhadores-2025" class="page-section">
+            <header class="banner-header">
+                <img src="images/banner/banner-ganhadores.png" alt="Banner Regulamento Robótica Educacional" class="banner-img" onerror="this.classList.add('banner-placeholder')">
+                <div class="banner-fallback-title">
+                    <h1>GANHADORES 2025</h1>
+                </div>
+            </header>
+
+            <article class="content-wrapper">
+                <header class="section-title-group">
+                    <h2>Ganhadores do CROPE em 2025</h2>
+                    <p class="lead-text">Conheça os competidores que mostraram todo seu talento na edição 2025 do CROPE.</p>
+                </header>
+
+                <article class="alert-box warning-alert">
+                    <div class="alert-header">
+                        <h3>🤖 Robô-Sumô</h3>
+                    </div>
+                    <h3>1º lugar: CE Ver José Balan: Titan Balan</h3>
+                    <h3>2° lugar: CE Nestor Victor: Haikaze</h3>
+                    <h3>3° lugar: CE Nestor Victor: Aluzão</h3>
+                    <h3>4° lugar: CE Nestor Victor: Cybergirls</h3>
+                    <h3>5ª lugar: CE Lucia Alves - Vórtex Sombrio</h3>
+                </article>
+
+                <article class="alert-box ganhadores-alert">
+                    <div class="alert-header">
+                        <h3>🚗 Seguidor de Linha</h3>
+                    </div>
+                    <h3>1º lugar: CE Castelo Branco: Destructor</h3>                   
+                    <h3>2° lugar: CE Nestor Victor : Legendário</h3>
+                    <h3>3º lugar: CE Santa Eliza: Roblô</h3>
+                    <h3>4° lugar: CE Castelo Branco: Robocopssanta</h3>
+                    <h3>5ª lugar: CE Malba Tahan: Cyber Flash</h3>
+                </article>
+
+                <section class="rules-detail-card">
+                    <h3>O próximo ganhador pode ser você 🫵</h3>                                        
+                </section>
+            </article>
+        </section>
+        
+       <!-- ================= SEÇÃO: GANHADORES 2026 ================= -->
+        <section id="ganhadores-2026" class="page-section">
+            <header class="banner-header">
+                <img src="images/banner/banner-ganhadores.png" alt="Banner Regulamento Robótica Educacional" class="banner-img" onerror="this.classList.add('banner-placeholder')">
+                <div class="banner-fallback-title">
+                    <h1>GANHADORES 2026</h1>
+                </div>
+            </header>
+
+            <article class="content-wrapper">
+                <header class="section-title-group">
+                    <h2>Ganhadores do CROPE em 2026 (EM BREVE)</h2>
+                    <p class="lead-text">Conheça os competidores que mostraram todo seu talento na edição 2026 do CROPE.</p>
+                </header>
+
+               <!-- <article class="alert-box warning-alert">
+                    <div class="alert-header">
+                        <h3>🤖 Robô-Sumô</h3>
+                    </div>
+                    <h3>1º lugar: CE Ver José Balan: Titan Balan</h3>
+                    <h3>2° lugar: CE Nestor Victor: Haikaze</h3>
+                    <h3>3° lugar: CE Nestor Victor: Aluzão</h3>
+                    <h3>4° lugar: CE Nestor Victor: Cybergirls</h3>
+                    <h3>5ª lugar: CE Lucia Alves - Vórtex Sombrio</h3>
+                </article>
+
+                <article class="alert-box ganhadores-alert">
+                    <div class="alert-header">
+                        <h3>🚗 Seguidor de Linha</h3>
+                    </div>
+                    <h3>1º lugar: CE Castelo Branco: Destructor</h3>                   
+                    <h3>2° lugar: CE Nestor Victor : Legendário</h3>
+                    <h3>3º lugar: CE Santa Eliza: Roblô</h3>
+                    <h3>4° lugar: CE Castelo Branco: Robocopssanta</h3>
+                    <h3>5ª lugar: CE Malba Tahan: Cyber Flash</h3>
+                </article>
+
+                <section class="rules-detail-card">
+                    <h3>O próximo ganhador pode ser você 🫵</h3>                                        
+                </section> -->
+            </article>
+        </section> 
+        
+        <!-- ================= SEÇÃO: CONTATO ================= -->
+        <section id="contato" class="page-section">
+            <header class="banner-header">
+                <img src="images/banner/banner-contato.png" alt="Banner Contato" class="banner-img" onerror="this.classList.add('banner-placeholder')">
+                <div class="banner-fallback-title">
+                    <h1>CONTATO</h1>
+                </div>
+            </header>
+
+            <article class="content-wrapper">
+                <header class="section-title-group">
+                    <h2>Fale Conosco</h2>
+                    <p class="lead-text">Dúvidas sobre os regulamentos, inscrições ou logística do evento? Entre em contato com a equipe organizadora.</p>
+                </header>
+
+                <section class="contacts-grid">
+                    <article class="contact-card glow-cyan">
+                        <header class="contact-card-header">
+                            <span class="contact-tag">Coordenação</span>
+                            <h3>Robótica Educacional</h3>
+                        </header>
+                        <div class="contact-body">
+                            <div class="person-name">Kelly Christina Rezende</div>
+                            <ul class="contact-details-list">
+                                <li>📧 <a href="mailto:kelly_rezende@escola.pr.gov.br">kelly_rezende@escola.pr.gov.br</a></li>
+                                <li>🏢 NRE de Umuarama</li>
+                                <li>☎️ (44) 3621-8610</li>
+                                <li>📱 (44) 99833-7289</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="contact-card glow-purple">
+                        <header class="contact-card-header">
+                            <span class="contact-tag">Coordenação</span>
+                            <h3>Programação Educacional</h3>
+                        </header>
+                        <div class="contact-body">
+                            <div class="person-name">Edmilson Ramos Coelho</div>
+                            <ul class="contact-details-list">
+                                <li>📧 <a href="mailto:nreumr_programacao@educacao.pr.gov.br">nreumr_programacao@educacao.pr.gov.br</a></li>
+                                <li>🏢 NRE de Umuarama</li>
+                                <li>☎️ (44) 3621-8656</li>
+                                <li>📱 (44) 99976-3508</li>
+                            </ul>
+                        </div>
+                    </article>
+                </section>
+            </article>
+        </section>
+
+        <!-- Cole este bloco dentro de <main class="main-content">, no final, após todas as .page-section -->
+        <footer class="sponsors-footer">
+            <div class="sponsors-container">
+                <span class="sponsors-title">Apoio & Realização</span>
+                <div class="sponsors-logos">
+                    <!-- Substitua os 'src' pelos caminhos das imagens dos patrocinadores -->
+                    <img src="images/logo/logo-nre.png" alt="Núcleo Regional de Educação de Umuarama" class="sponsor-logo">
+                    <img src="images/logo/logo-gazin.png" alt="Móveis Gazin" class="sponsor-logo">
+                    <img src="images/logo/logo-nre00.png" alt="Patrocinador 3" class="sponsor-logo">
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
