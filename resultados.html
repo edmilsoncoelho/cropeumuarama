@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados AO VIVO — 2º C.R.O.P.E.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resultados.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal do Site (Mantém a identidade) -->
+    <header class="main-header">
+        <div class="logo">
+            <span class="neon-text">2º C.R.O.P.E.</span>
+        </div>
+        <a href="index.html" class="btn-back">← Voltar ao Site</a>
+    </header>
+
+    <main class="results-container">
+        
+        <div class="results-header">
+            <h1 class="page-title">PAINEL DE RESULTADOS <span class="live-tag">● AO VIVO</span></h1>
+            <p class="page-subtitle">Acompanhe a classificação e os confrontos em tempo real</p>
+        </div>
+
+        <!-- Seletor de Modalidades -->
+        <nav class="results-tabs">
+            <button class="tab-button active" onclick="switchTab('sumo')">🤖 Robô Sumô</button>
+            <button class="tab-button" onclick="switchTab('seguidor')">🏎️ Seguidor de Linha</button>
+            <button class="tab-button" onclick="switchTab('programacao')">💻 Programação</button>
+        </nav>
+
+        <!-- Conteúdo: Robô Sumô -->
+        <section id="tab-sumo" class="tab-panel active">
+            <h2 class="section-title">Chaveamento Mata-Mata</h2>
+            <div id="sumo-matches" class="matches-grid">
+                <p class="loading-text">Carregando confrontos...</p>
+            </div>
+        </section>
+
+        <!-- Conteúdo: Seguidor de Linha -->
+        <section id="tab-seguidor" class="tab-panel">
+            <h2 class="section-title">Classificação (Menor Tempo)</h2>
+            <div class="table-wrapper">
+                <table class="cyber-table">
+                    <thead>
+                        <tr>
+                            <th>POS.</th>
+                            <th>NOME DA EQUIPE</th>
+                            <th>INSTITUIÇÃO DE ENSINO</th>
+                            <th>TEMPO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="seguidor-ranking">
+                        <tr><td colspan="4" class="loading-text">Carregando tempos...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Conteúdo: Programação -->
+        <section id="tab-programacao" class="tab-panel">
+            <h2 class="section-title">Classificação (Maior Nota)</h2>
+            <div class="table-wrapper">
+                <table class="cyber-table">
+                    <thead>
+                        <tr>
+                            <th>POS.</th>
+                            <th>NOME DO ESTUDANTE</th>
+                            <th>INSTITUIÇÃO DE ENSINO</th>
+                            <th>PONTUAÇÃO FINAL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="programacao-ranking">
+                        <tr><td colspan="4" class="loading-text">Carregando notas...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/resultados.js"></script>
+</body>
+</html>

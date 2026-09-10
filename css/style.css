@@ -331,6 +331,24 @@ body.cyber-theme {
     margin-bottom: 0.8rem; 
 }
 
+.badge-neon2 { 
+    display: inline-block; 
+    padding: 4px 14px; 
+    background: rgba(0, 240, 255, 0.12); 
+    border: 1px solid var(--cyan-neon); 
+    color: var(--cyan-neon); 
+    border-radius: 20px; 
+    font-size: 1.1rem; 
+    font-weight: 700; 
+    margin-bottom: 0.8rem; 
+    animation: pulse-live 1.5s infinite;
+}
+
+@keyframes pulse-live {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.95); }
+}
+
 .section-title-group h2 { 
     font-family: var(--font-heading); 
     font-size: 2rem; 
