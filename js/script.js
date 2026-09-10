@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     
     // CONFIGURAÇÃO DA GALERIA ALEATÓRIA LOCAL
-    const TOTAL_FOTOS_PASTA = 13;  // Quantidade total de fotos salvas na pasta
-    const FOTOS_POR_EXIBICAO = 5; // Quantas fotos serão sorteadas por acesso
+    const TOTAL_FOTOS_PASTA = 26;  // Quantidade total de fotos salvas na pasta
+    const FOTOS_POR_EXIBICAO = 10; // Quantas fotos serão sorteadas por acesso
     const wrapper = document.getElementById('slider-wrapper2025');
     const prevBtn = document.getElementById('slider-prev');
     const nextBtn = document.getElementById('slider-next');
