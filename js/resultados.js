@@ -94,7 +94,7 @@ async function fetchLiveResults() {
         
 
 
-        // 3. ROBÔ SUMÔ (Agrupado por Fases com Alinhamento Perfeito)
+        // 3. ROBÔ SUMÔ (Agrupado por Fases com Arena e Alinhamento)
         const resSumo = await fetch(`https://opensheet.elk.sh/${SHEET_ID}/sumo`);
         if (resSumo.ok) {
             const dataSumo = await resSumo.json();
@@ -104,7 +104,7 @@ async function fetchLiveResults() {
                 match['FASE:'] && match['Nome EQUIPE A:']
             );
 
-            // 2. Agrupa os confrontos por Fase (ex: "16 AVOS", "OITAVAS", "QUARTAS")
+            // 2. Agrupa os confrontos por Fase
             const fases = {};
             lutasValidas.forEach(match => {
                 const nomeFase = match['FASE:'].trim().toUpperCase();
@@ -116,7 +116,7 @@ async function fetchLiveResults() {
 
             let htmlSumo = '';
 
-            // 3. Monta o HTML agrupado por fase
+            // 3. Monta o HTML agrupado por fase com indicação da Arena
             for (const [fase, partidas] of Object.entries(fases)) {
                 htmlSumo += `
                     <div class="phase-group">
@@ -129,12 +129,17 @@ async function fetchLiveResults() {
                     const placarA = match['PLACAR A:'] !== undefined && match['PLACAR A:'] !== '' ? match['PLACAR A:'] : '0';
                     const placarB = match['PLACAR B:'] !== undefined && match['PLACAR B:'] !== '' ? match['PLACAR B:'] : '0';
                     const vencedor = match['Vencedor:'] || '';
+                    const arena = match['Arena:'] || ''; // Lê a coluna da Arena
 
                     const isTeamAWinner = vencedor && vencedor.trim().toLowerCase() === equipeA.trim().toLowerCase();
                     const isTeamBWinner = vencedor && vencedor.trim().toLowerCase() === equipeB.trim().toLowerCase();
 
+                    // Tag HTML da Arena (exibida se a coluna estiver preenchida)
+                    const arenaHtml = arena ? `<div style="grid-column: 1 / -1; text-align: center;"><span class="arena-badge">📍 ${arena}</span></div>` : '';
+
                     htmlSumo += `
-                        <div class="match-card-grid">
+                        <div class="match-card-grid" style="grid-template-columns: 1fr auto 1fr; position: relative;">
+                            ${arenaHtml}
                             <div class="team-left ${isTeamAWinner ? 'winner-team' : ''}">
                                 ${equipeA}
                             </div>

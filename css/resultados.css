@@ -262,3 +262,18 @@ body {
     font-weight: bold;
     min-width: 70px;
 }
+
+/* Badge da Arena no Sumô */
+.arena-badge {
+    display: inline-block;
+    background: rgba(255, 0, 127, 0.15);
+    color: var(--pink-neon, #ff007f);
+    border: 1px solid var(--pink-neon, #ff007f);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
